@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="note">
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js"></script>
+    <title>exo1 , tweet</title>
+</head>
+<body ng-controller="myCtrl">
+
+<h1>Note :</h1>
+
+<input type="text" ng-model="text" maxlength = "100" ng-keypress="press()"/>
+
+<div class="btn-group" role="group" aria-label="...">
+ <button type="button" class="btn btn-default" ng-click="register()">Enregistrer</button>
+ <button type="button" class="btn btn-default" ng-click="delete()">Effacer</button>
+</div>
+
+
+<div class="bandeauCompteur"  >
+	<p>Nombre de caractères restants: {{100-text.length}}</p>
+</div>
+
+<div class="bandeauInfo" ng-model="affichage" ng-class="	style" ng-show="text.length > 0">{{affichage}}</div>
+</body>
+</html>
